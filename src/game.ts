@@ -3,7 +3,7 @@
  */
 import { createChannel } from '../node_modules/decentraland-builder-scripts/channel'
 import { createInventory } from '../node_modules/decentraland-builder-scripts/inventory'
-import Script1 from "../1ab2733f-1782-4521-9eda-6aa8ad684277/src/item"
+import Script1 from '../models/TriggerArea/src/item'
 
 const _scene = new Entity('_scene')
 engine.addEntity(_scene)
