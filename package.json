@@ -1,7 +1,7 @@
 {
   "name": "reactions-etcetera",
   "version": "1.0.0",
-  "description": "A science theme puzzle solving adventure using chemistry and physics",
+  "description": "A science themed puzzle solving adventure using chemistry and physics",
   "scripts": {
     "start": "dcl start",
     "build": "build-ecs",
