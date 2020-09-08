@@ -17,6 +17,7 @@ let currentSpawns = {
 };
 const X_COORD = 0;
 const Y_COORD = 1;
+const S_COORD = 2;
 
 // Sounds
 // Mining sound effect
@@ -46,12 +47,14 @@ export class Mineral extends Entity {
     this.addComponent(model);
 
     let position = this.getSpawnPosition();
+    let scale = this.getSpawnScale();
     this.addComponent(new Transform({
       position: new Vector3(position.x, position.y ,position.z),
-      scale: new Vector3(1,1,1)
+      scale: new Vector3(scale.x, scale.y, scale.z)
     }));
 
     // XXX TODO: add random model scale size
+    //here
 
     engine.addEntity(this);
 
@@ -89,6 +92,18 @@ export class Mineral extends Entity {
     currentSpawns.z.push(spawnPosition.z);
 
     return spawnPosition;
+  };
+
+  private getSpawnScale() {
+    let randomS = this.randomCoordinate(S_COORD);
+
+    let spawnScale = {
+      x: randomS,
+      y: randomS,
+      z: randomS
+    };
+
+    return spawnScale;
   };
 
   public getInventory(): Array<string> {
@@ -136,11 +151,11 @@ export class Mineral extends Entity {
     engine.addEntity(this);
   }
 
-  private randomCoordinate(spawnAxis: number = 0) {
+  private randomCoordinate(spawn: number = 0) {
     let randomNum;
     
     // XXX (note): Um, so this collider protection doesn't really work
-    if (spawnAxis == X_COORD) {
+    if (spawn == X_COORD) {
       let randomNumX = Math.round(Math.random() * (maxSpawnX - minSpawnX) + minSpawnX);
       if (
         currentSpawns.x.indexOf(randomNumX) !== -1 
@@ -154,7 +169,7 @@ export class Mineral extends Entity {
         randomNum = randomNumX;
       }
 
-    } else {
+    } else if (spawn == Y_COORD) {
       let randomNumY = Math.round(Math.random() * (maxSpawnY - minSpawnY) + minSpawnY);
       if (
         currentSpawns.z.indexOf(randomNumY) !== -1
@@ -167,6 +182,8 @@ export class Mineral extends Entity {
       } else {
         randomNum = randomNumY;
       }
+    } else if (spawn == S_COORD) {
+      randomNum = Math.random() + 0.2;
     }
 
     return randomNum;
