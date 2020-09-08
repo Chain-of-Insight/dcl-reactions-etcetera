@@ -1,9 +1,12 @@
 /**
  * Exported from builder
  */
+import { Scene2Main } from "./physics-machine/sceneMain"
 import { createChannel } from '../node_modules/decentraland-builder-scripts/channel'
 import { createInventory } from '../node_modules/decentraland-builder-scripts/inventory'
 import Script1 from '../models/TriggerArea/src/item'
+
+Scene2Main.buildScene()
 
 const _scene = new Entity('_scene')
 engine.addEntity(_scene)
