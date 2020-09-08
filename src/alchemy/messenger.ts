@@ -1,5 +1,5 @@
-import * as ui from '../node_modules/@dcl/ui-utils/index';
-import { Dialog } from '../node_modules/@dcl/ui-utils/utils/types';
+import * as ui from '../../node_modules/@dcl/ui-utils/index';
+import { Dialog } from '../../node_modules/@dcl/ui-utils/utils/types';
 
 const ALCHEMIST_PORTRAIT = 'models/alchemy/dialog/alchemist.png';
 

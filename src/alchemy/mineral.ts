@@ -1,7 +1,7 @@
-import utils from '../node_modules/decentraland-ecs-utils/index';
-import { InterpolationType } from '../node_modules/decentraland-ecs-utils/transform/math/interpolation';
-import * as ui from '../node_modules/@dcl/ui-utils/index';
-import { ImageSection } from '../node_modules/@dcl/ui-utils/utils/types';
+import utils from '../../node_modules/decentraland-ecs-utils/index';
+import { InterpolationType } from '../../node_modules/decentraland-ecs-utils/transform/math/interpolation';
+import * as ui from '../../node_modules/@dcl/ui-utils/index';
+import { ImageSection } from '../../node_modules/@dcl/ui-utils/utils/types';
 
 // External params
 const ZINCITE = "zincite";
