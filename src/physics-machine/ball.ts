@@ -71,7 +71,7 @@ export class Ball extends Entity {
  
   public create(state) {
     if (this.isAnimating) {
-      log('return false');
+      // log('return false');
       return;
     }
  

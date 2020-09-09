@@ -1,12 +1,9 @@
 /**
  * Exported from builder
  */
-import { Scene2Main } from "./physics-machine/sceneMain"
 import { createChannel } from '../node_modules/decentraland-builder-scripts/channel'
 import { createInventory } from '../node_modules/decentraland-builder-scripts/inventory'
 import Script1 from '../models/TriggerArea/src/item'
-
-Scene2Main.buildScene()
 
 const _scene = new Entity('_scene')
 engine.addEntity(_scene)
@@ -882,15 +879,15 @@ const transform75 = new Transform({
 })
 smallLuxuriousFenceModule4.addComponentOrReplace(transform75)
 
-const triggerArea2 = new Entity('triggerArea2')
-engine.addEntity(triggerArea2)
-triggerArea2.setParent(_scene)
+// const triggerArea2 = new Entity('triggerArea2')
+// engine.addEntity(triggerArea2)
+// triggerArea2.setParent(_scene)
 const transform76 = new Transform({
   position: new Vector3(31.838420867919922, 0, 60.48530578613281),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(9.375, 0.5, 4.774332523345947)
 })
-triggerArea2.addComponentOrReplace(transform76)
+// triggerArea2.addComponentOrReplace(transform76)
 
 const channelId = Math.random().toString(16).slice(2)
 const channelBus = new MessageBus()
@@ -1311,8 +1308,8 @@ aluminumDoor.addComponent(
     scale: new Vector3(3.4, 3.4, 3.4),
     rotation: new Quaternion(0, 1, 0, 1)
   }));
-engine.addEntity(aluminumDoor);
-initDoor();
+// engine.addEntity(aluminumDoor);
+// initDoor();
 
 // Door rubble
 const doorRubble = new Entity();
@@ -1467,12 +1464,51 @@ function getCurrentTimestamp() {
 
 
 /**
- * INCREDIBLE MACHINE
+ * PHYSICS MACHINE
  */
+import { TriggerBoxShape } from '../node_modules/decentraland-ecs-utils/triggers/triggerSystem';
+import { Scene2Main } from './physics-machine/sceneMain';
+import { PhysicistNPC } from './physics-machine/messenger';
 
-// TODO XXX: Connect trigger area (enter behind fence zone)
-script1.spawn(triggerArea2, {"enabled":true}, createChannel(channelId, triggerArea2, channelBus))
+Scene2Main.buildScene();
+
+// Set trigger box for entering zone
+const boxT = new Entity();
+
+boxT.addComponent(new BoxShape())
+boxT.getComponent(BoxShape).withCollisions = false;
+boxT.setParent(_scene);
+boxT.addComponent(new Transform({
+  position: new Vector3(transform76.position.x, transform76.position.y - 1, transform76.position.z),
+  scale: transform76.scale,
+  rotation: transform76.rotation
+}));
+let physicsStarted = false;
+//create trigger for entity
+boxT.addComponent(
+  new utils.TriggerComponent(
+    new TriggerBoxShape(
+      new Vector3(7, 2, 7),
+      new Vector3(1, 5, 1)
+    ), //shape
+    0, //layer
+    0, //triggeredByLayer
+    null, //onTriggerEnter
+    null, //onTriggerExit
+    () => {
+      //onCameraEnter
+      if (!physicsStarted) {
+        let greeting = new PhysicistNPC(null, false);
+        greeting.startScene();
+        physicsStarted = true;
+      }
+    },
+    null //onCameraExit
+  )
+);
+//add entity to engine
+engine.addEntity(boxT);
 
 /**
- * END INCREDIBLE MACHINE
+ * END PHYSCIS MACHINE
  */

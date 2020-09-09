@@ -15,7 +15,8 @@ export class PhysicistNPC {
   public icon: ui.SmallIcon;
   public dialog2: ui.DialogWindow;
   constructor(
-    private dialog: ui.DialogWindow = null
+    private dialog: ui.DialogWindow = null,
+    private hasStarted: boolean = true
   ) {
     this.dialog = new ui.DialogWindow(
       { 
@@ -24,17 +25,24 @@ export class PhysicistNPC {
       true // Dark theme
     );
 
-    this.icon = new ui.SmallIcon(
-      'models/physics-machine/icons/target.png', 
-      // x, y
-      -80, 80, 
-      // Width, height
-      48, 48
-    );
-    this.hitCounter = new ui.UICounter(this.numHits, -15, 80);
-
-    this.dialog.openDialogWindow(this.IntroText, 0);
+    if (this.hasStarted) {
+      this.icon = new ui.SmallIcon(
+        'models/physics-machine/icons/target.png', 
+        // x, y
+        -80, 80, 
+        // Width, height
+        48, 48
+      );
+      this.hitCounter = new ui.UICounter(this.numHits, -15, 80);
+    }
   }
+
+  startScene() {
+    if (!this.hasStarted)
+      this.dialog.openDialogWindow(this.IntroText, 0);
+  }
+
+  startGlobal
 
   onHit(){
     this.numHits++
