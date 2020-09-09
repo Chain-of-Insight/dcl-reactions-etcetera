@@ -2,6 +2,9 @@
 
 _Reactions et cetera_ is a science themed puzzle solving adventure involving chemistry and physics riddles. Players proceed through two puzzle stages using chained reactions to claim the final treasure. 
 
+- Link to play: https://dcl.chainofinsight.com/
+- Link to puzzle walkthrough (spoilers): https://www.youtube.com/watch?v=wyXzx-xWYkE
+
 ## Stage 1: Unreliable Alchemizer (Chemistry)
 
 *Keywords: Alchemy, mining mechanics, fantasy*
@@ -30,4 +33,4 @@ _Reactions et cetera_ is a science themed puzzle solving adventure involving che
 
 If you get stuck on any step of the puzzle or just want to see how it's solved. Here's a full walkthrough video:
 
-[![Puzzle Walkthrough](http://img.youtube.com/vi/wyXzx-xWYkE/0.jpg)](http://www.youtube.com/watch?v=wyXzx-xWYkE "Puzzle Walkthrough")
+[![Puzzle Walkthrough](http://img.youtube.com/vi/wyXzx-xWYkE/0.jpg)](https://www.youtube.com/watch?v=wyXzx-xWYkE "Puzzle Walkthrough")
