@@ -2,9 +2,9 @@
 
 _Reactions et cetera_ is a science themed puzzle solving adventure involving chemistry and physics riddles. Players proceed through two puzzle stages using chained reactions to claim the final treasure. 
 
-## Stage 1: From Soup to Nuts 
+## Stage 1: Unreliable Alchemizer (Chemistry)
 
-*Keywords: Alchemy, chemistry, mining, fantasy*
+*Keywords: Alchemy, mining mechanics, fantasy*
 
 - Follow the Alchemist's instructions and collect the correct minerals by mining them from random spawn points in the environment. 
 
@@ -16,7 +16,7 @@ _Reactions et cetera_ is a science themed puzzle solving adventure involving che
 
 - Once you have produced a successful alchemy event you'll have everything that you need to unlock the door to stage 2
 
-## Stage 2: A-MAZE-ing Machines (Physics)
+## Stage 2: Incredible Machine (Physics)
 
 *Keywords: Physics, battle mechanics, visuospatial*
 
