@@ -10,7 +10,7 @@ _Reactions et cetera_ is a science themed puzzle solving adventure involving che
 *Keywords: Alchemy, mining mechanics, fantasy*
 
 <p align="center">
-  <img width="250px" height="auto" src="https://cdn.discordapp.com/attachments/748119098872823898/753123304172421150/Screenshot_2020-09-09_07-13-10.png">
+  <img width="1277" height="auto" src="https://cdn.discordapp.com/attachments/748119098872823898/753123304172421150/Screenshot_2020-09-09_07-13-10.png">
 </p>
 
 - Follow the Alchemist's instructions and collect the correct minerals by mining them from random spawn points in the environment. 
@@ -28,7 +28,7 @@ _Reactions et cetera_ is a science themed puzzle solving adventure involving che
 *Keywords: Physics, battle mechanics, visuospatial*
 
 <p align="center">
-  <img width="250px" height="auto" src="https://cdn.discordapp.com/attachments/748119098872823898/753123326020288572/Screenshot_2020-09-09_07-19-33.png">
+  <img width="1277" height="auto" src="https://cdn.discordapp.com/attachments/748119098872823898/753123326020288572/Screenshot_2020-09-09_07-19-33.png">
 </p>
 
 - Follow the Physicist's instructions and correctly configure the alignment, velocity and distance for 4 turret cannons. Correct turret configurations are randomized at item spawn, so the answer is different each time the player encounters the puzzle.
