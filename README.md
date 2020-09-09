@@ -29,7 +29,6 @@ _Reactions et cetera_ is a science themed puzzle solving adventure involving che
 ## Spoiler Alert
 
 If you get stuck on any step of the puzzle or just want to see how it's solved. Here's a full walkthrough video:
-
-<centre>
+<div style="text-align:center">
 [![Puzzle Walkthrough](http://img.youtube.com/vi/wyXzx-xWYkE/0.jpg)](http://www.youtube.com/watch?v=wyXzx-xWYkE "Puzzle Walkthrough")
-</centre>
+</div>
