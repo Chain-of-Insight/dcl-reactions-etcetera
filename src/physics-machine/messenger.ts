@@ -42,16 +42,31 @@ export class PhysicistNPC {
       this.dialog.openDialogWindow(this.IntroText, 0);
   }
 
-  startGlobal
+  getSceneData() {
+    this.icon = new ui.SmallIcon(
+        'models/physics-machine/icons/target.png', 
+        // x, y
+        -80, 80, 
+        // Width, height
+        48, 48
+      );
+      this.icon.image.visible = false;
+      this.hitCounter = new ui.UICounter(this.numHits, -15, 80);
+      this.hitCounter.uiText.visible = false;
+  }
 
   onHit(){
     this.numHits++
     this.hitCounter.increase()
+    this.icon.image.visible = true;
+    this.hitCounter.uiText.visible = true;
   }
   
   reset(){
     this.hitCounter.set(0)
     this.numHits = 0
+    this.icon.image.visible = true;
+    this.hitCounter.uiText.visible = true;
   }
 
   hardReset(){
@@ -59,6 +74,8 @@ export class PhysicistNPC {
     this.numHits = 0
     this.displayedFirst = false
     this.displayedLast = false
+    this.icon.image.visible = true;
+    this.hitCounter.uiText.visible = true;
   }
 
   public dispMessage(){

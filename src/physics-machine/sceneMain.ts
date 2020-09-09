@@ -7,7 +7,8 @@ import { PhysicistNPC } from './messenger';
 export class Scene2Main {
   public static buildScene(){
     // Display introduction message
-    let messenger = new PhysicistNPC();
+    let messenger = new PhysicistNPC(null, false);
+    messenger.getSceneData();
 
     // the 4 plant positions
     let pos1 = new Vector3(31,0,25)

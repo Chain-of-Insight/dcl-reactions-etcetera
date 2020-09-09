@@ -1489,7 +1489,7 @@ boxT.addComponent(
   new utils.TriggerComponent(
     new TriggerBoxShape(
       new Vector3(7, 2, 7),
-      new Vector3(1, 5, 1)
+      new Vector3(0, 5, 0)
     ), //shape
     0, //layer
     0, //triggeredByLayer
@@ -1498,6 +1498,11 @@ boxT.addComponent(
     () => {
       //onCameraEnter
       if (!physicsStarted) {
+        boxT.addComponentOrReplace(
+          new utils.Delay(5000, () => {
+            galliumAluminumMixtureIcon.image.visible = false;
+          })
+        );
         let greeting = new PhysicistNPC(null, false);
         greeting.startScene();
         physicsStarted = true;
