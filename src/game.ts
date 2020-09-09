@@ -1498,11 +1498,13 @@ boxT.addComponent(
     () => {
       //onCameraEnter
       if (!physicsStarted) {
-        boxT.addComponentOrReplace(
-          new utils.Delay(5000, () => {
-            galliumAluminumMixtureIcon.image.visible = false;
-          })
-        );
+        if (galliumAluminumMixtureIcon) {
+          boxT.addComponentOrReplace(
+            new utils.Delay(5000, () => {
+              galliumAluminumMixtureIcon.image.visible = false;
+            })
+          );
+        }
         let greeting = new PhysicistNPC(null, false);
         greeting.startScene();
         physicsStarted = true;

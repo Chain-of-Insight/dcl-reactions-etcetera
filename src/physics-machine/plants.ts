@@ -4,8 +4,8 @@ import { Plant } from "./plant"
 
 const plantModel1 = new GLTFShape("models/physics-machine/plants/plant1.glb")
 const plantModel2 = new GLTFShape("models/physics-machine/plants/plant2.glb")
-const audioClip1 = new AudioClip("sounds/physics-machine/plantlow.mp3")
-const audioClip2 = new AudioClip("sounds/physics-machine/planthigh.mp3")
+const audioClip1 = new AudioClip("sounds/plantlow.mp3")
+const audioClip2 = new AudioClip("sounds/planthigh.mp3")
 
 export class Plants {
     static buildPlants(
@@ -17,25 +17,25 @@ export class Plants {
         const plant1 = new Plant(
             this.randomModel(),
             this.sound(0),
-            new Transform({ position: pos1, scale: this.shape(0) })
+            new Transform({ position: new Vector3(pos1.x-6.2, pos1.y, pos1.z) , scale: this.shape(0) })
         )
         
         const plant2 = new Plant(
             this.randomModel(),
             this.sound(1),
-            new Transform({ position: pos2, scale: this.shape(1) })
+            new Transform({ position: new Vector3(pos2.x-5.8, pos2.y, pos2.z), scale: this.shape(1) })
         )
 
         const plant3 = new Plant(
             this.randomModel(),
             this.sound(2),
-            new Transform({ position: pos3, scale: this.shape(2) })
+            new Transform({ position: new Vector3(pos3.x-5.8, pos3.y, pos3.z), scale: this.shape(2) })
         )
 
         const plant4 = new Plant(
             this.randomModel(),
             this.sound(3),
-            new Transform({ position: pos4, scale: this.shape(3) })
+            new Transform({ position: new Vector3(pos4.x-6.2, pos4.y, pos4.z), scale: this.shape(3) })
         )
     }
 
@@ -52,7 +52,7 @@ export class Plants {
     // encodes the platform solutions
     private static sound(i:number):AudioClip {
         let switchVal = Solution.solSwitchboard[i]
-        if (switchVal == 0){
+        if (switchVal == 0) {
             return audioClip1
         } else {
             return audioClip2

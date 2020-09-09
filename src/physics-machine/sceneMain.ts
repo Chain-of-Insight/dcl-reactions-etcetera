@@ -22,7 +22,7 @@ export class Scene2Main {
     const puzzlePiece1 = new PuzzlePiece(
         new Vector3(8, -0.13, 8),
         new Vector3(20, 5, 8),
-        new Vector3(33,0,27),
+        new Vector3(27,0,27),
         new Vector3(30.08, 10.22, 14.54),
         angles1,
         new Quaternion(0, 0, 0, 1),
@@ -34,7 +34,7 @@ export class Scene2Main {
     const puzzlePiece2 = new PuzzlePiece(
         new Vector3(27, 6, 50), 
         new Vector3(15, 9, 50),
-        new Vector3(33, 0, 33),
+        new Vector3(27, 0, 33),
         new Vector3(33, 11, 40),
         angles2,
         new Quaternion(0, -90, 0, 1),
@@ -46,7 +46,7 @@ export class Scene2Main {
     const puzzlePiece3 = new PuzzlePiece(
         new Vector3(50, 8, 40), 
         new Vector3(50, 12, 50),
-        new Vector3(44, 0, 33),
+        new Vector3(38, 0, 33),
         new Vector3(32.78, 10.91, 45.38),
         angles3,
         new Quaternion(0, -180, 0, 1),
@@ -58,7 +58,7 @@ export class Scene2Main {
     const puzzlePiece4 = new PuzzlePiece(
         new Vector3(60, 15, 10), 
         new Vector3(58, 20, 10),
-        new Vector3(44, 0, 27),
+        new Vector3(38, 0, 27),
         new Vector3(27.66, 6.68, 18.12),
         angles4,
         new Quaternion(0, 0, 0, 1),
@@ -70,7 +70,7 @@ export class Scene2Main {
     const button1 = new Button(
         new GLTFShape("models/physics-machine/buttons/firebutton.glb"), 
         { 
-            position: new Vector3(30, 1.5, 30),
+            position: new Vector3(22, 1.5, 30),
             scale: new Vector3(0.3, 0.3, 0.3),
             rotation: Quaternion.Euler(0, 90, 0)
         }
