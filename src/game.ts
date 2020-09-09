@@ -1308,8 +1308,8 @@ aluminumDoor.addComponent(
     scale: new Vector3(3.4, 3.4, 3.4),
     rotation: new Quaternion(0, 1, 0, 1)
   }));
-// engine.addEntity(aluminumDoor);
-// initDoor();
+engine.addEntity(aluminumDoor);
+initDoor();
 
 // Door rubble
 const doorRubble = new Entity();
