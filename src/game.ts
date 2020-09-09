@@ -889,13 +889,13 @@ const transform76 = new Transform({
 })
 // triggerArea2.addComponentOrReplace(transform76)
 
-const channelId = Math.random().toString(16).slice(2)
-const channelBus = new MessageBus()
-const inventory = createInventory(UICanvas, UIContainerStack, UIImage)
-const options = { inventory }
+// const channelId = Math.random().toString(16).slice(2)
+// const channelBus = new MessageBus()
+// const inventory = createInventory(UICanvas, UIContainerStack, UIImage)
+// const options = { inventory }
 
-const script1 = new Script1();
-script1.init();
+// const script1 = new Script1();
+// script1.init();
 
 /**
  * End builder export
