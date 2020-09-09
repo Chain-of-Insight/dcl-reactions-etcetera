@@ -385,6 +385,52 @@ gltfShape2.isPointerBlocker = true
 gltfShape2.visible = true
 bloomingPinkAcaciaTree.addComponentOrReplace(gltfShape2)
 
+const bloomingPinkAcaciaTree2 = new Entity();
+bloomingPinkAcaciaTree2.setParent(_scene)
+const t = new Transform({
+  position: new Vector3(11, 0, 50),
+  rotation: new Quaternion(0, 0, 0, 1),
+  scale: new Vector3(1, 1, 1)
+})
+bloomingPinkAcaciaTree2.addComponentOrReplace(t);
+bloomingPinkAcaciaTree2.addComponentOrReplace(gltfShape2);
+engine.addEntity(bloomingPinkAcaciaTree2);
+
+const bloomingPinkAcaciaTree3 = new Entity();
+bloomingPinkAcaciaTree3.setParent(_scene)
+const t2 = new Transform({
+  position: new Vector3(11, 0, 28),
+  rotation: new Quaternion(0, 0, 0, 1),
+  scale: new Vector3(1, 1, 1)
+})
+bloomingPinkAcaciaTree3.addComponentOrReplace(t2);
+bloomingPinkAcaciaTree3.addComponentOrReplace(gltfShape2);
+engine.addEntity(bloomingPinkAcaciaTree3);
+
+const bloomingPinkAcaciaTree4 = new Entity();
+const t3 = new Transform({
+  position: new Vector3(58, 1.2, 52), 
+  scale: new Vector3(1, 1, 1)
+})
+bloomingPinkAcaciaTree4.addComponentOrReplace(t3);
+bloomingPinkAcaciaTree4.addComponentOrReplace(gltfShape2);
+engine.addEntity(bloomingPinkAcaciaTree4);
+
+const environmentLedgeModel = new GLTFShape('models/physics-machine/platform/platform_t.glb');
+environmentLedgeModel.withCollisions = true;
+environmentLedgeModel.isPointerBlocker = true;
+environmentLedgeModel.visible = true;
+const environmentLedgeTransform = new Transform({ 
+  position: new Vector3(58, 1.2, 52), 
+  rotation: Quaternion.Euler(0, 90, 0),
+  scale: new Vector3(4, 2, 2)
+});
+const environmentLedge = new Entity();
+environmentLedge.addComponent(environmentLedgeModel);
+environmentLedge.addComponent(environmentLedgeTransform);
+engine.addEntity(environmentLedge);
+
+
 const stonePond = new Entity('stonePond')
 engine.addEntity(stonePond)
 stonePond.setParent(_scene)
@@ -1516,6 +1562,14 @@ boxT.addComponent(
 //add entity to engine
 engine.addEntity(boxT);
 
+// Drawing board
+const drawingboard = new Entity();
+drawingboard.addComponent(new GLTFShape('models/physics-machine/drawingboard/drawingboard.glb'));
+drawingboard.addComponent(new Transform({ 
+  position: new Vector3(14, -0.15, 20), 
+  scale: new Vector3(0.225, 0.225, 0.225)
+}));
+engine.addEntity(drawingboard);
 /**
  * END PHYSCIS MACHINE
  */
